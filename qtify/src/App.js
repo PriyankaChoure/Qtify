@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Navbar } from "./components/Navbar/Navbar";
 import { HeroSection } from "./components/HeroSection/HeroSection";
 import { fetchAlbumData, fetchSongsData, fetchTopSongs } from "./apis/api";
-import { Card } from "./components/Card/Card";
 import { Sections } from "./components/Sections/Sections";
+import { FAQSection } from "./components/AccordianFAQ/FAQSection";
 const App = () => {
   const [data, setData] = useState({});
 
@@ -28,6 +28,7 @@ const App = () => {
       <div>
         {Object.keys(data).length > 0 ? <Sections albums={data} /> : <></>}
       </div>
+      <FAQSection />
     </div>
   );
 };

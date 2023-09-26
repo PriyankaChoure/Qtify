@@ -1,7 +1,7 @@
 import React from "react";
 
 import styles from "./Sections.module.css";
-import { fetchAlbumData, fetchFilters, fetchSongsData } from "../../apis/api";
+import { fetchFilters } from "../../apis/api";
 import { Section } from "../Section/Section";
 
 export const Sections = ({ albums }) => {
