@@ -16,12 +16,12 @@ export const Section = ({
   useEffect(() => {
     if (filterSource) {
       filterSource().then((data) => {
-        console.log("Filter data - ", data.data);
+        // console.log("Filter data - ", data.data);
         setFilters([...filters, ...data.data]);
       });
     }
   }, []);
-  console.log("data source - ", dataSourse);
+  // console.log("data source - ", dataSourse);
   const handleToggle = () => {
     setisShowAll((prevState) => !prevState);
   };
@@ -31,7 +31,7 @@ export const Section = ({
       ? card.genre.key === filters[selectedFilterIndex].key
       : card
   );
-  console.log("filter data -", filteredCardList);
+  // console.log("filter data -", filteredCardList);
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
